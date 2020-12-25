@@ -199,11 +199,12 @@ NS_ASSUME_NONNULL_BEGIN
                             fromBundleNameOrNil:@"FirebaseOAuthUI"];
   UIColor *buttonColor = [UIColor blackColor];
   UIColor *buttonTextColor = [UIColor whiteColor];
-  if (userInterfaceStyle == UIUserInterfaceStyleDark) {
-    iconImage = [iconImage imageWithTintColor:[UIColor blackColor]];
-    buttonColor = [UIColor whiteColor];
-    buttonTextColor = [UIColor blackColor];
-  }
+    
+  // palapa changes
+  iconImage = [iconImage imageWithTintColor:[UIColor blackColor]];
+  buttonColor = [UIColor whiteColor];
+  buttonTextColor = [UIColor blackColor];
+  
   FUIOAuth *provider = [[FUIOAuth alloc] initWithAuthUI:[FUIAuth defaultAuthUI]
                                              providerID:@"apple.com"
                                         buttonLabelText:@"Sign in with Apple"
